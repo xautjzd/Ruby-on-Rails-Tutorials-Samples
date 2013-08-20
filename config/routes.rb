@@ -1,6 +1,6 @@
 SampleApp::Application.routes.draw do
 	
-	match "signup", to: 'users#new', via: 'get' 
+	match "signup", to: 'users#new', as: 'signup', via: 'get' 
 
 	root 'static_pages#home'
 	
