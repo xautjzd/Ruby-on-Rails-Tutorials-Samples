@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-	attr_accessor :password, :password_confirmation
-	# has_secure_password
+	# below is needed in rails3,but not in rails4
+	# attr_accessor :password, :password_confirmation
 
 	before_save { self.email = email.downcase }
 
