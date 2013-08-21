@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+# source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -9,13 +10,16 @@ gem 'sqlite3'
 group :test, :development do
 	gem 'rspec-rails'
 	gem 'guard-rspec'
-	gem 'factory_girl_rails'
+	# gem 'factory_girl_rails'
 end
 
 gem 'capybara', group: :test
 
 #convert Bootstrap LESS to Sass
 gem 'bootstrap-sass'
+
+#encrypt the password
+gem 'bcrypt-ruby', '3.0.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

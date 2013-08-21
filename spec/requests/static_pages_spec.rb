@@ -41,21 +41,19 @@ describe "Static Pages" do
 	  it { should have_title(full_title('Contact')) }
   end
   
-  describe "should have the right links on the layout" do
-	  visit root_path
-	  clicklink 'About'
-	  expect(page).to have_title(full_title(About Us))
-	  clicklink 'Help'
-	  expect(page).to
-	  clicklink 'About'
-	  expect(page).to
-	  clicklink 'Contact'
-	  expect(page).to
-	  clicklink 'Home'
-	  expect(page).to
-	  clicklink 'Sign Up'
-	  expect(page).to
-	  clicklink 'sample app'
-	  expect(page).to
+  it "should have the right links on the layout" do
+	  visit root_path 
+	  click_link 'About'
+	  expect(page).to have_title(full_title('About Us'))
+	  click_link 'Help'
+	  expect(page).to have_title(full_title('Help'))
+	  click_link 'Contact'
+	  expect(page).to have_title(full_title('Contact'))
+	  click_link 'Home'
+	  expect(page).to  have_title('')
+	  click_link 'Sign up now!'
+	  expect(page).to have_title(full_title('Sign Up'))
+	  click_link 'sample app'
+	  expect(page).to have_title('')
   end
 end
