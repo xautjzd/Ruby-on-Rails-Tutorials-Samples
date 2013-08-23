@@ -10,7 +10,10 @@ gem 'sqlite3'
 group :test, :development do
 	gem 'rspec-rails'
 	gem 'guard-rspec'
-	# gem 'factory_girl_rails'
+end
+
+group :test do
+	gem 'factory_girl_rails', '4.2.1'
 end
 
 gem 'capybara', group: :test
