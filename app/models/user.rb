@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
 	# below is needed in rails3,but not in rails4
 	# attr_accessor :password, :password_confirmation
+	
+	#set dependent attribute to cascade delete
+	has_many :microposts, dependent: :destroy
 
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token 
@@ -19,6 +22,10 @@ class User < ActiveRecord::Base
 
 	def User.encrypt(token)
 		Digest::SHA1.hexdigest(token.to_s)
+	end
+
+	def feed
+		Micropost.where("user_id = ?", id)
 	end
 
 	private
