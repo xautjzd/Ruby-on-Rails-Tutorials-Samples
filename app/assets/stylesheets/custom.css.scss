@@ -83,7 +83,7 @@ footer {
 		color: #555;
 		&:hover {
 			color: #222;
-	}
+}
 }
 small {
 	float: left;
@@ -94,7 +94,7 @@ ul {
 	li {
 		float: left;
 		margin-left: 10px;
-	}
+}
 }
 }
 
@@ -127,25 +127,50 @@ aside {
 		&:first-child {
 			border: 0;
 			padding-top: 0;
-	}
-	span {
-		display: block;
-		margin-bottom: 3px;
-		line-height: 1;
-	}
-	h1 {
-		font-size: 1.4em;
-		text-align: left;
-		letter-spacing: -1px;
-		margin-bottom: 3px;
-		margin-top: 0px
-	}
+}
+span {
+	display: block;
+	margin-bottom: 3px;
+	line-height: 1;
+}
+h1 {
+	font-size: 1.4em;
+	text-align: left;
+	letter-spacing: -1px;
+	margin-bottom: 3px;
+	margin-top: 0px
+}
 }
 }
 
-.gravatar {
-	float: left;
-	margin-right: 10px;
+
+.stats {
+	overflow: auto;
+	a {
+		float: left;
+		padding: 0 10px;
+		border-left: 1px solid $grayLighter;
+		color: gray;
+		&:first-child {
+			padding-left: 0;
+			border: 0;
+		}
+		&:hover {
+			text-decoration: none;
+			color: $blue;
+		}
+	}
+	strong {
+		display: block;
+	}
+}
+
+.user_avatars {
+	overflow: auto;
+	margin-top: 10px;
+	.gravatar {
+		margin: 1px 1px;
+	}
 }
 
 /* forms */
@@ -167,7 +192,7 @@ input {
 	ul {
 		list-style: none;
 		margin: 0 0 18px 0;
-	}
+}
 }
 
 .field_with_errors {
@@ -177,17 +202,17 @@ input {
 
  /* Users index */
  .users {
- 	list-style: none;
-	margin: 0;
+	 list-style: none;
+	 margin: 0;
 
-	li {
-		overflow: auto;
-		padding: 10px, 0;
-		border-top: 1px solid $grayMediumLight;
-		&.last-child {
-			border-bottom: 1px solid $grayMediumLight;
-		}
-	}
+	 li {
+		 overflow: auto;
+		 padding: 10px, 0;
+		 border-top: 1px solid $grayMediumLight;
+		 &.last-child {
+			 border-bottom: 1px solid $grayMediumLight;
+}
+}
  }
 
  /* microposts */
@@ -198,7 +223,7 @@ input {
 	 li { 
 		 padding: 10px 0;
 		 border-top: 1px solid #e8e8e8;
-	 }
+ }
 }
 
 .content {
@@ -218,6 +243,6 @@ aside {
 	textarea {
 		height: 100px;
 		margin-bottom: 5px;
-	}
+}
 }
 
